@@ -2,10 +2,11 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-    let websiteController = WebsiteController()
-    try app.register(collection: websiteController)
+    
+    let streamController = StreamController()
+    try app.register(collection: streamController)
 
-    app.get("hello") { req async -> String in
-        "Hello, world!"
+    app.get("", ":manifestName") { req async throws -> View in
+        return try await streamController.streamRenderer(req: req)
     }
 }

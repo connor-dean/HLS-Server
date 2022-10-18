@@ -3,7 +3,6 @@
         <title>HTTP Live Streaming Example</title>
     </head>
     <body>
-        <video src="/streams/test/test.m3u8" height="300" width="400">
-        </video>
+        <video controls src="/streams/test/#(manifestName)" height="300" width="400" />
     </body>
 </html>
