@@ -21,6 +21,6 @@ struct StreamController: RouteCollection {
       
     let context = StreamContext(manifestName: manifest)
                                            
-    return try await req.view.render("index", context)
+    return try await req.view.render("streams", context)
   }
 }

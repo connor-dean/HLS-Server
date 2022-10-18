@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>HTTP Live Streaming Example</title>
+        <link rel="stylesheet" href="/styles/streams.css">
+    </head>
+    <body>
+        <div class="container">
+            <video controls src="/streams/test/#(manifestName)" height="800" width="1200" />
+        </div>
+    </body>
+</html>
