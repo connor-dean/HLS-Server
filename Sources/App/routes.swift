@@ -22,6 +22,13 @@ func routes(_ app: Application) throws {
         
         print("fileName: \(fileInfo.videoFile.filename)")
         
+        do {
+            try await req.fileio.writeFile(fileInfo.videoFile.data, at: "Public/\(fileInfo.videoFile.filename)")
+        } catch {
+            print("error: \(error)")
+            return "Failed"
+        }
+        
         return fileInfo.videoFile.filename
     }
     
